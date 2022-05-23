@@ -1,6 +1,8 @@
 import React from 'react';
 
 const Footer = () => {
+    const today = new Date();
+    const year = today.getFullYear();
     return (
         <footer
             class="footer footer-center p-4 bg-gray-900 sm:sm-w-100 text-white">
@@ -28,7 +30,7 @@ const Footer = () => {
                         <a class="link link-hover">CONTACT US</a>
                     </div>
                     <div className='mt-10'>
-                        <p>Copyright © 2022 - All right reserved by Al-Amin</p>
+                        <p>Copyright © {year} - All right reserved by Al-Amin</p>
                     </div>
                 </div>
             </div>

@@ -10,14 +10,16 @@ import Login from './Pages/Login/Login';
 
 function App() {
   return (
-    <div>
-      <Navbar></Navbar>
-      <Routes>
-        <Route path='/' element={<Home></Home>}></Route>
-        <Route path='/blogs' element={<Blogs></Blogs>}></Route>
-        <Route path='/login' element={<Login></Login>}></Route>
-        <Route path='*' element={<NotFound></NotFound>}></Route>
-      </Routes>
+    <div className='page-container'>
+      <div className="contend-wrap">
+        <Navbar></Navbar>
+        <Routes>
+          <Route path='/' element={<Home></Home>}></Route>
+          <Route path='/blogs' element={<Blogs></Blogs>}></Route>
+          <Route path='/login' element={<Login></Login>}></Route>
+          <Route path='*' element={<NotFound></NotFound>}></Route>
+        </Routes>
+      </div>
       <Footer></Footer>
     </div>
   );
