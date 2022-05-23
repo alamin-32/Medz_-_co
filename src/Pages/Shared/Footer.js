@@ -2,7 +2,8 @@ import React from 'react';
 
 const Footer = () => {
     return (
-        <footer class="footer footer-center p-4 bg-gray-900 sm:sm-w-100 text-white">
+        <footer
+            class="footer footer-center p-4 bg-gray-900 sm:sm-w-100 text-white">
             <div>
                 <h4 className='text-xl font-bold mb-8 text-gray-500'>Subscribe now</h4>
                 <h1 class="font-bold text-cyan-400 text-4xl">

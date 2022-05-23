@@ -15,17 +15,17 @@ const Login = () => {
     }
 
     return (
-        <div className='flex justify-center items-center bg-gray-200 h-screen'>
+        <div style={{
+            background: `url(https://media.istockphoto.com/vectors/healthcare-and-medicine-related-seamless-pattern-and-background-with-vector-id1207522002?k=20&m=1207522002&s=612x612&w=0&h=QYpte3zHiV8GKlUNXfUGrKfxGc_6_ys6-Wqn6YIDzCw=)`
+        }} className='flex justify-center items-center bg-gray-200  h-screen'>
             <div className="card w-96 bg-base-100 shadow-xl">
-                <div className="card-body">
+                <div className="card-body bg-slate-300">
                     <h2 className="text-center text-2xl font-bold">Log In</h2>
 
                     <form onSubmit={handleSubmit(onSubmit)}>
-
-
                         <div class="form-control w-full max-w-xs">
                             <label class="label">
-                                <span class="label-text">Email</span>
+                                <span class="label-text font-bold">Email</span>
                             </label>
                             <input
                                 type="email"
@@ -52,7 +52,7 @@ const Login = () => {
                         </div>
                         <div class="form-control w-full max-w-xs">
                             <label class="label">
-                                <span class="label-text">Password</span>
+                                <span class="label-text font-bold">Password</span>
                             </label>
                             <input
                                 type="password"
