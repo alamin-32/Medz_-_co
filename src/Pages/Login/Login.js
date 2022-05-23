@@ -1,6 +1,7 @@
 import React from 'react';
 import { useSignInWithEmailAndPassword, useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import { useForm } from "react-hook-form";
+import { Link } from 'react-router-dom';
 import auth from '../../firebase.init'
 import Loading from '../Shared/Loading';
 
@@ -14,12 +15,18 @@ const Login = () => {
         error,
     ] = useSignInWithEmailAndPassword(auth);
 
+    let signInError;
+
     if (loading || gLoading) {
         return <Loading></Loading>
     }
 
-    if (gUser) {
-        console.log(gUser);
+    if (error || gError) {
+        signInError = <p className='text-red-600'><small>{error?.message || gError.message}</small></p>
+    }
+
+    if (user || gUser) {
+        console.log(user || gUser);
     }
     const onSubmit = data => {
         console.log(data);
@@ -91,7 +98,9 @@ const Login = () => {
                         </div>
                         <input className='btn w-full btn-outline max-w-xs text-white font-bold bg-cyan-400' value='Log In' type="submit" />
                     </form>
-
+                    <p className='text-gray-600'>New to Medz? <Link className='text-cyan-600 font-semibold' to="/signup"> Create Account</Link></p>
+                    <p className='text-gray-600'>Forgot Password? <Link className='text-cyan-600 font-semibold' to="/resetPass">Reset Password</Link></p>
+                    {signInError}
                     <div className="divider">OR</div>
 
                     <button onClick={() => signInWithGoogle()}
