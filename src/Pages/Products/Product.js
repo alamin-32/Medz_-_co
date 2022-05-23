@@ -5,7 +5,7 @@ const Product = ({ product }) => {
     return (
         <div className=' mt-5 mb-5'>
             <div
-                class="card card-compact w-96 bg-cyan-100 shadow-xl">
+                class="card card-compact w-50 bg-cyan-100 shadow-xl">
                 <figure><img src={img} alt="Shoes" /></figure>
                 <div class="card-body">
                     <h2 class="card-title text-xl font-bold">{name}</h2>

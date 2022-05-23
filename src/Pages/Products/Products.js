@@ -12,7 +12,7 @@ const Products = ({ home }) => {
         <div className='bg-gray-100'>
             <h1 className='text-center py-8 text-5xl text-cyan-400 font-bold'>Our Product Collection</h1>
             <div>
-                <div className='grid lg:grid-cols-3 sm:grid-cols-1  gap-5 ml-5'>
+                <div className='grid lg:grid-cols-3 sm:grid-cols-1  gap-5  px-5'>
                     {home ?
                         products.slice(6, 10).reverse().map(product => (
                             <Product
