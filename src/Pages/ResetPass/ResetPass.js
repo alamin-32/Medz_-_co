@@ -26,15 +26,18 @@ const ResetPass = () => {
 
     return (
 
-        <div className='flex justify-center items-center bg-gray-200 py-20'>
+        <div
+            className='flex justify-center items-center bg-gray-200 h-screen'>
             <div class="form-control w-full max-w-xs  ">
                 <label class="label">
                     <span class="label-text">Email</span>
                 </label>
+
                 <input onBlur={handleEmail} type="email" placeholder="Your Email" class="input input-bordered w-full max-w-xs" />
                 <label class="label">
                     <span class="label-text-alt">{resetError}</span>
                 </label>
+
                 <button onClick={async () => {
                     await sendPasswordResetEmail(email);
                     toast("Password Send Successfully");
