@@ -13,7 +13,7 @@ const Facility = () => {
                     <p className='font-semibold'>For orders over $50</p>
                 </div>
             </div>
-            <div class="card lg:card-side bg-base-100 shadow-xl px-10 bg-cyan-100">
+            <div class="card lg:card-side bg-base-100 shadow-xl px-10 py-1 bg-cyan-100">
                 <figure><img src={min2} alt="Album" /></figure>
                 <div class="card-body">
                     <h2 class="card-title text-center font-bold">Official Discounts</h2>
