@@ -1,3 +1,4 @@
+import { Result } from 'antd';
 import React, { useEffect, useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { useParams } from 'react-router-dom';
@@ -35,7 +36,25 @@ const ProductDetails = () => {
             quantity: quantity
         }
         console.log(data);
+
+        // const url = `https://medz-app.herokuapp.com/products`;
+        // fetch(url, {
+        //     method: "POST",
+        //     headers: {
+        //         "content-type": "application/json"
+        //     },
+        //     body: JSON.stringify(data)
+        // })
+        //     .then(res => res.json())
+        //     .then(result => {
+        //         console.log(result)
+        //         alert("Ordered Successful")
+        //     })
+
+
+
     }
+
 
 
 
@@ -96,6 +115,7 @@ const ProductDetails = () => {
                                     placeholder="Address"
                                     class="input input-bordered w-full max-w-xs"
                                     name="address"
+                                    required
                                 />
                             </div>
                             <div class="form-control w-full font-bold max-w-xs">
@@ -107,6 +127,7 @@ const ProductDetails = () => {
                                     placeholder="Phone Number"
                                     class="input input-bordered w-full max-w-xs"
                                     name="number"
+                                    required
                                 />
                             </div>
                             <div class="form-control w-full font-bold max-w-xs">
@@ -117,11 +138,14 @@ const ProductDetails = () => {
                                     type="number"
                                     placeholder="Quantity"
                                     class="input input-bordered w-full max-w-xs"
-                                    // min={products.minimumQuantity}
-                                    // max={products.availableQuantity}
+                                    min={products.minimumQuantity}
+                                    max={products.availableQuantity}
                                     name="quantity"
+                                    required
                                 />
+
                             </div>
+
                             <input className='btn w-full btn-outline max-w-xs text-white font-bold bg-cyan-400 mt-5' value='Purchase' type="submit" />
                         </form>
                     </div>
