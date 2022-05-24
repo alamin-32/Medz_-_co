@@ -1,6 +1,6 @@
 [
     {
-        "_id": 1,
+        
         "name": "Band Aid Roll",
         "img": "https://cdn.shopify.com/s/files/1/0396/3509/1612/products/shop-18.jpg?v=1590486058",
         "description": "",
@@ -9,7 +9,7 @@
         "price": 128
     },
     {
-        "_id": 2,
+        
         "name": "Digital BP Monitor",
         "img": "https://cdn.shopify.com/s/files/1/0396/3509/1612/products/shop-6_large.jpg?v=1590486040",
         "description": "",
@@ -18,7 +18,7 @@
         "price": 999
     },
     {
-        "_id": 3,
+       
         "name": "Del PPE Kit",
         "img": "https://cdn.shopify.com/s/files/1/0396/3509/1612/products/shop-22_6c165d8a-b373-4403-9984-11951673a90c_2000x.jpg?v=1590486026",
         "description": "",
@@ -27,7 +27,7 @@
         "price": 125
     },
     {
-        "_id": 4,
+       
         "name": "Digital Thermometer",
         "img": "https://cdn.shopify.com/s/files/1/0396/3509/1612/products/shop-14_a6967220-8ca5-4fb8-9c08-90e78250675b_2000x.jpg?v=1590486022",
         "description": "",
@@ -36,7 +36,7 @@
         "price": 275
     },
     {
-        "_id": 5,
+        
         "name": "Wet Wipes",
         "img": "https://cdn.shopify.com/s/files/1/0396/3509/1612/products/shop-1_2000x.jpg?v=1590486013",
         "description": "",
@@ -45,7 +45,7 @@
         "price": 215
     },
     {
-        "_id": 6,
+        
         "name": "N95 Face Mask",
         "img": "https://cdn.shopify.com/s/files/1/0396/3509/1612/products/shop-5_2000x.jpg?v=1590486114",
         "description": "",
@@ -54,7 +54,7 @@
         "price": 325
     },
     {
-        "_id": 7,
+        
         "name": "Test Kit",
         "img": "https://cdn.shopify.com/s/files/1/0396/3509/1612/products/shop-11_1a68ac0d-218d-43cb-a57d-be9b0e4e05d8_2000x.jpg?v=1590486017",
         "description": "",
@@ -63,7 +63,7 @@
         "price": 300
     },
     {
-        "_id": 8,
+        
         "name": "Surgical Gloves",
         "img": "https://cdn.shopify.com/s/files/1/0396/3509/1612/products/shop-13_2000x.jpg?v=1590486049",
         "description": "",
@@ -72,7 +72,7 @@
         "price": 225
     },
     {
-        "_id": 9,
+        
         "name": "Thermometer",
         "img": "https://cdn.shopify.com/s/files/1/0396/3509/1612/products/shop-2_8e396608-0712-4541-8f15-112eea13abd1_2000x.jpg?v=1590486085",
         "description": "",
