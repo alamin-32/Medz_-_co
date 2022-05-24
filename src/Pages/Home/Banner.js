@@ -1,7 +1,12 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import banner1 from '../../assets/images/banner1.webp'
 
 const Banner = () => {
+    const navigate = useNavigate()
+    const toShop = () => {
+        navigate('/products')
+    }
     return (
         <div style={{
             background: `url(${banner1})`
@@ -13,7 +18,7 @@ const Banner = () => {
                     <h1 className="text-5xl mt-3 text-#555555 font-bold">For Physician & Medical</h1>
                     <h1 className="text-5xl mt-3 text-#555555 font-bold">Professional</h1>
                     <p className="py-6 font-bold text-xl ">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
-                    <button className="btn btn-primary uppercase mt-8 text-white font-bold bg-gradient-to-r from-cyan-500 #05B4B6">Shop Now</button>
+                    <button onClick={toShop} className="btn btn-primary uppercase mt-8 text-white font-bold bg-gradient-to-r from-cyan-500 #05B4B6">Shop Now</button>
                 </div>
             </div>
         </div>

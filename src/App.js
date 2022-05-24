@@ -11,6 +11,7 @@ import ResetPass from './Pages/ResetPass/ResetPass';
 import Signup from './Pages/Login/Signup';
 import RequireAuth from './Pages/Login/RequireAuth';
 import Products from './Pages/Products/Products';
+import ProductDetails from './Pages/Products/ProductDetails';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <Routes>
           <Route path='/' element={<Home></Home>}></Route>
           <Route path='/products' element={<RequireAuth><Products></Products></RequireAuth>}></Route>
+          <Route path='/productDetails/:id' element={<ProductDetails></ProductDetails>}></Route>
           <Route path='/blogs' element={<Blogs></Blogs>}></Route>
           <Route path='/login' element={<Login></Login>}></Route>
           <Route path='/signup' element={<Signup></Signup>}></Route>
