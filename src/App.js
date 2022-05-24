@@ -12,6 +12,9 @@ import Signup from './Pages/Login/Signup';
 import RequireAuth from './Pages/Login/RequireAuth';
 import Products from './Pages/Products/Products';
 import ProductDetails from './Pages/Products/ProductDetails';
+import Dashboard from './Pages/Dashboard/Dashboard';
+import MyOrders from './Pages/Dashboard/MyOrders';
+import MyReview from './Pages/Dashboard/MyReview';
 
 function App() {
   return (
@@ -19,9 +22,30 @@ function App() {
       <div className="contend-wrap">
         <Navbar></Navbar>
         <Routes>
+
           <Route path='/' element={<Home></Home>}></Route>
-          <Route path='/products' element={<RequireAuth><Products></Products></RequireAuth>}></Route>
-          <Route path='/productDetails/:id' element={<ProductDetails></ProductDetails>}></Route>
+
+          <Route path='/products' element={
+            <RequireAuth>
+              <Products></Products>
+            </RequireAuth>
+          }></Route>
+
+          <Route path='/dashboard' element={
+            <RequireAuth>
+              <Dashboard></Dashboard>
+            </RequireAuth>
+          }>
+            <Route index element={<MyOrders></MyOrders>}></Route>
+            <Route path='review' element={<MyReview></MyReview>}></Route>
+          </Route>
+
+          <Route path='/productDetails/:id' element={
+            <RequireAuth>
+              <ProductDetails></ProductDetails>
+            </RequireAuth>
+          }></Route>
+
           <Route path='/blogs' element={<Blogs></Blogs>}></Route>
           <Route path='/login' element={<Login></Login>}></Route>
           <Route path='/signup' element={<Signup></Signup>}></Route>

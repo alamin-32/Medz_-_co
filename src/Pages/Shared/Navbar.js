@@ -24,15 +24,21 @@ const Navbar = () => {
         <>
             <li><Link to='/'>Home</Link></li>
             <li><Link to='/products'>Products</Link></li>
-            <li><Link to='/dashboard'>DashBoard</Link></li>
             <li><Link to='/blogs'>Blogs</Link></li>
-            {user ?
-                <button
-                    onClick={logout}
-                    className="btn  btn-active bg-cyan-400 text-white font-bold">
-                    Sign Out
-                </button>
-                : <li><Link to='/login'>Log In</Link></li>}
+
+            {
+                user &&
+                <li><Link to='/dashboard'>DashBoard</Link></li>
+            }
+
+            {
+                user ?
+                    <button
+                        onClick={logout}
+                        className="btn  btn-active bg-cyan-400 text-white font-bold">
+                        Sign Out
+                    </button>
+                    : <li><Link to='/login'>Log In</Link></li>}
         </>
     return (
         <div className="navbar bg-base-100 text-xl font-bold text-#555555 ">
