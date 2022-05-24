@@ -1,15 +1,15 @@
 import { signOut } from 'firebase/auth';
 import React from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import logo from '../../assets/images/logo.png'
 import auth from '../../firebase.init';
 import Loading from './Loading';
+import { AiFillDatabase } from "react-icons/ai";
 
 const Navbar = () => {
 
     const [user, loading] = useAuthState(auth);
-    const navigate = useNavigate();
 
     if (loading) {
         return <Loading></Loading>
@@ -58,6 +58,10 @@ const Navbar = () => {
                 <ul className="menu menu-horizontal p-0">
                     {menuItem}
                 </ul>
+            </div>
+            <div className='navbar-end'>
+                <label for="my-drawer-2" class="btn bg-cyan-400 drawer-button lg:hidden"><p><AiFillDatabase /></p></label>
+
             </div>
         </div>
     );

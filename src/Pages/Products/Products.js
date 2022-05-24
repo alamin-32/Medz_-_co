@@ -13,7 +13,7 @@ const Products = ({ home }) => {
 
     return (
         <div className=''>
-            <h1 className='text-center py-8 text-5xl text-cyan-400 font-bold'>Our Product Collection</h1>
+            <h1 className='text-center py-8 text-5xl text-cyan-500 font-bold'>Our Product Collection</h1>
             <div>
                 <div className='grid lg:grid-cols-3 sm:grid-cols-1  gap-5  px-5'>
                     {

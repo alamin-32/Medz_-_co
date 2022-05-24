@@ -7,7 +7,7 @@ import { RiToolsFill } from 'react-icons/ri';
 const Stat = () => {
     return (
         <div className='my-10 px-10'>
-            <h2 className="text-3xl text-5xl text-cyan-400 font-bold text-center mb-5">Our Business Summary</h2>
+            <h2 className="text-3xl text-5xl text-cyan-500 font-bold text-center mb-5">Our Business Summary</h2>
             <div className='flex justify-between text-white bg-cyan-400 py-7 px-10 rounded-xl'>
                 <div className=''>
                     <IoIosPeople className='text-6xl' />

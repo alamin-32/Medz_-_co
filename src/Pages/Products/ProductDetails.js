@@ -16,7 +16,7 @@ const ProductDetails = () => {
             <div
                 class="card card-compact w-96">
                 <figure><img src={products.img} alt="Shoes" /></figure>
-                <div class="card-body text-center">
+                <div class="card-body">
                     <h2 class=" text-xl font-bold">{products.name}</h2>
                     <p>Description: {products.description}</p>
                     <h2 className='text-md font-bold'>Available: {products.available}</h2>
