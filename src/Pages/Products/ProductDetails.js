@@ -37,8 +37,7 @@ const ProductDetails = () => {
         }
         console.log(order);
 
-        const url = 'https://medz-app.herokuapp.com/orders';
-        fetch(url, {
+        fetch('https://medz-app.herokuapp.com/orders', {
             method: "POST",
             headers: {
                 "content-type": "application/json"
@@ -53,6 +52,22 @@ const ProductDetails = () => {
             })
 
 
+        const updateQuantity = parseInt(products.available) - (quantity);
+
+
+        const url = `http://localhost:5000/products/${id}`;
+        fetch(url, {
+            method: "PUT",
+            headers: {
+                "content-type": "application/json",
+            },
+            body: JSON.stringify({ updateQuantity }),
+        })
+            .then((res) => res.json())
+            .then((result) => {
+                setProducts(result)
+
+            });
 
     }
 
@@ -139,8 +154,6 @@ const ProductDetails = () => {
                                     type="number"
                                     placeholder="Quantity"
                                     class="input input-bordered w-full max-w-xs"
-                                    min={products.minimumQuantity}
-                                    max={products.availableQuantity}
                                     name="quantity"
                                     required
                                 />
