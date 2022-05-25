@@ -12,16 +12,16 @@ const Product = ({ product }) => {
     return (
         <div className=' mt-5 mb-5'>
             <div
-                class="card card-compact w-50 bg-cyan-200 shadow-2xl">
+                className="card card-compact w-50 bg-cyan-200 shadow-2xl">
                 <figure><img src={img} alt="Shoes" /></figure>
-                <div class="card-body">
-                    <h2 class="card-title text-xl font-bold">{name}</h2>
+                <div className="card-body">
+                    <h2 className="card-title text-xl font-bold">{name}</h2>
                     <p>Description: {description}</p>
                     <h2 className='text-md font-bold'>Available: {available}</h2>
                     <h2 className='text-md font-bold'>Min Order: {order}</h2>
                     <h1 className='text-xl font-bold'>Price: {price} Tk</h1>
-                    <div class="card-actions justify-start">
-                        <button onClick={() => toProductDetails(_id)} class="btn border-0 font-bold text-white bg-cyan-400">Order Now</button>
+                    <div className="card-actions justify-start">
+                        <button onClick={() => toProductDetails(_id)} className="btn border-0 font-bold text-white bg-cyan-400">Order Now</button>
                     </div>
                 </div>
             </div>

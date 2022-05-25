@@ -15,6 +15,8 @@ import ProductDetails from './Pages/Products/ProductDetails';
 import Dashboard from './Pages/Dashboard/Dashboard';
 import MyOrders from './Pages/Dashboard/MyOrders';
 import MyReview from './Pages/Dashboard/MyReview';
+import ManageItems from './Pages/Dashboard/ManageItems';
+import ManageUsers from './Pages/Dashboard/ManageUsers';
 
 function App() {
   return (
@@ -38,6 +40,8 @@ function App() {
           }>
             <Route index element={<MyOrders></MyOrders>}></Route>
             <Route path='review' element={<MyReview></MyReview>}></Route>
+            <Route path='manageItem' element={<ManageItems></ManageItems>}></Route>
+            <Route path='manageUsers' element={<ManageUsers></ManageUsers>}></Route>
           </Route>
 
           <Route path='/productDetails/:id' element={

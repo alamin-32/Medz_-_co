@@ -13,8 +13,8 @@ const MyOrders = () => {
     return (
         <div>
             <h1 className='text-center text-3xl font-bold mt-5'>My Products: <span className='text-cyan-700'>{orders.length}</span></h1>
-            <div class="overflow-x-auto mx-5">
-                <table class="table w-full my-10 ">
+            <div className="overflow-x-auto mx-5">
+                <table className="table w-full my-10 ">
                     <thead className='bg-cyan-400'>
                         <tr>
                             <th className='bg-cyan-400'></th>
@@ -25,12 +25,13 @@ const MyOrders = () => {
                     </thead>
                     <tbody>
                         {
-                            orders.map((order, index) => <tr>
-                                <th className='font-semibold text-center bg-cyan-100 '>{index + 1}</th>
-                                <td className='font-semibold text-center bg-cyan-100 '>{order.email}</td>
-                                <td className='font-semibold text-center bg-cyan-100 '>{order._id}</td>
-                                <td className='font-bold text-center bg-cyan-100 '>{order.quantity}</td>
-                            </tr>)
+                            orders.map((order, index) =>
+                                <tr key={order._id}>
+                                    <th className='font-semibold text-center bg-cyan-100 '>{index + 1}</th>
+                                    <td className='font-semibold text-center bg-cyan-100 '>{order.email}</td>
+                                    <td className='font-semibold text-center bg-cyan-100 '>{order._id}</td>
+                                    <td className='font-bold text-center bg-cyan-100 '>{order.quantity}</td>
+                                </tr>)
                         }
                     </tbody>
                 </table>

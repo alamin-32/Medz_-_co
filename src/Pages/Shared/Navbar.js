@@ -60,7 +60,7 @@ const Navbar = () => {
                 </ul>
             </div>
             <div className='navbar-end'>
-                <label for="my-drawer-2" class="btn bg-cyan-400 drawer-button lg:hidden"><p><AiFillDatabase /></p></label>
+                <label htmlFor="my-drawer-2" className="btn bg-cyan-400 drawer-button lg:hidden"><p><AiFillDatabase /></p></label>
 
             </div>
         </div>

@@ -56,7 +56,7 @@ const ProductDetails = () => {
         const updateQuantity = parseInt(products.available) - (quantity);
 
 
-        const url = `http://localhost:5000/products/${id}`;
+        const url = `https://medz-app.herokuapp.com/products/${id}`;
         fetch(url, {
             method: "PUT",
             headers: {
@@ -70,6 +70,10 @@ const ProductDetails = () => {
 
             });
 
+        if (products.order > products.available) {
+            alert('Invalid Order')
+        }
+
     }
 
     return (
@@ -78,10 +82,10 @@ const ProductDetails = () => {
         <div className=" mx-auto mt-10 grid grid-cols-1 lg:grid-cols-2 md:grid-cols-1 my-20">
 
             <div className='flex justify-center items-center'>
-                <div class="card card-compact w-3/6 bg-cyan-200">
+                <div className="card card-compact w-3/6 bg-cyan-200">
                     <figure><img src={products.img} alt="gloves" /></figure>
-                    <div class="card-body">
-                        <h2 class="card-title text-xl font-bold">{products.name}</h2>
+                    <div className="card-body">
+                        <h2 className="card-title text-xl font-bold">{products.name}</h2>
                         <p>Description: {products.description}</p>
                         <h2 className='text-md font-bold'>Available: {products.available}</h2>
                         <h2 className='text-md font-bold'>Min Order: {products.order}</h2>
@@ -98,62 +102,64 @@ const ProductDetails = () => {
                     <h2 className="text-3xl font-bold text-cyan-400 text-start ml-14">Order Details</h2>
                     <div className="">
                         <form onSubmit={handlePurchase}>
-                            <div class="form-control font-bold w-full max-w-xs">
-                                <label class="label">
-                                    <span class="label-text">Name</span>
+                            <div className="form-control font-bold w-full max-w-xs">
+                                <label className="label">
+                                    <span className="label-text">Name</span>
                                 </label>
                                 <input
                                     type="text"
                                     placeholder="Name"
-                                    class="input input-bordered font-semibold w-full max-w-xs"
+                                    className="input input-bordered font-semibold w-full max-w-xs"
                                     value={user?.displayName}
                                     disabled
                                 />
                             </div>
-                            <div class="form-control font-bold w-full max-w-xs">
-                                <label class="label">
-                                    <span class="label-text">Email</span>
+                            <div className="form-control font-bold w-full max-w-xs">
+                                <label className="label">
+                                    <span className="label-text">Email</span>
                                 </label>
                                 <input
                                     type="email"
                                     placeholder="Email"
-                                    class="input input-bordered font-semibold w-full max-w-xs"
+                                    className="input input-bordered font-semibold w-full max-w-xs"
                                     value={user?.email}
                                     disabled
                                 />
                             </div>
-                            <div class="form-control w-full font-bold max-w-xs">
-                                <label class="label">
-                                    <span class="label-text">Address</span>
+                            <div className="form-control w-full font-bold max-w-xs">
+                                <label className="label">
+                                    <span className="label-text">Address</span>
                                 </label>
                                 <input
                                     type="text"
                                     placeholder="Address"
-                                    class="input input-bordered w-full max-w-xs"
+                                    className="input input-bordered w-full max-w-xs"
                                     name="address"
                                     required
                                 />
                             </div>
-                            <div class="form-control w-full font-bold max-w-xs">
-                                <label class="label">
-                                    <span class="label-text">Phone Number</span>
+                            <div className="form-control w-full font-bold max-w-xs">
+                                <label className="label">
+                                    <span className="label-text">Phone Number</span>
                                 </label>
                                 <input
                                     type="text"
                                     placeholder="Phone Number"
-                                    class="input input-bordered w-full max-w-xs"
+                                    className="input input-bordered w-full max-w-xs"
                                     name="phone"
                                     required
                                 />
                             </div>
-                            <div class="form-control w-full font-bold max-w-xs">
-                                <label class="label">
-                                    <span class="label-text">Quantity</span>
+                            <div className="form-control w-full font-bold max-w-xs">
+                                <label className="label">
+                                    <span className="label-text">Quantity</span>
                                 </label>
                                 <input
                                     type="number"
                                     placeholder="Quantity"
-                                    class="input input-bordered w-full max-w-xs"
+                                    className="input input-bordered w-full max-w-xs"
+                                    min={products.order}
+                                    max={products.available}
                                     name="quantity"
                                     required
                                 />

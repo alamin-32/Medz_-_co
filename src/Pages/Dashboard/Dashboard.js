@@ -3,19 +3,21 @@ import { Link, Outlet } from 'react-router-dom';
 
 const Dashboard = () => {
     return (
-        <div class="drawer drawer-mobile">
-            <input id="my-drawer-2" type="checkbox" class="drawer-toggle" />
-            <div class="drawer-content">
+        <div className="drawer drawer-mobile ">
+            <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
+            <div className="drawer-content">
                 <h1 className='text-5xl text-center mt-6 text-cyan-400 font-bold'>Dashboard</h1>
                 <Outlet></Outlet>
             </div>
 
-            <div class="drawer-side">
-                <label for="my-drawer-2" class="drawer-overlay"></label>
-                <ul class="menu p-4 overflow-y-auto w-48 bg-base-100 text-base-content">
+            <div className="drawer-side ">
+                <label htmlFor="my-drawer-2" className="drawer-overlay"></label>
+                <ul className="menu p-4 overflow-y-auto w-60 bg-cyan-200 rounded-md text-base-content">
 
-                    <li><Link to='/dashboard'>My Orders</Link></li>
-                    <li><Link to='review'>My Review</Link></li>
+                    <li className='text-md font-bold'><Link to='/dashboard'>My Orders</Link></li>
+                    <li className='text-md font-bold'><Link to='review'>My Review</Link></li>
+                    <li className='text-md font-bold'> <Link to='manageItem'>Manage Products</Link></li>
+                    <li className='text-md font-bold'> <Link to='manageUsers'>Manage Users</Link></li>
                 </ul>
             </div>
         </div>

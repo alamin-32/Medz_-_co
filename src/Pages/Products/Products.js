@@ -5,7 +5,6 @@ const Products = ({ home }) => {
     const [products, setProducts] = useState([])
 
     useEffect(() => {
-        console.log('ok')
         fetch('https://medz-app.herokuapp.com/products')
             .then(res => res.json())
             .then(data => setProducts(data))
