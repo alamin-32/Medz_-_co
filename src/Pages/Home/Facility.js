@@ -6,21 +6,21 @@ import min3 from '../../assets/images/min3.webp'
 const Facility = () => {
     return (
         <div className='grid lg:grid-cols-3 sm:grid-cols-1 gap-5 p-8'>
-            <div className="card lg:card-side bg-base-100 shadow-xl px-14 bg-cyan-100">
+            <div className="card lg:card-side shadow-xl px-14 bg-cyan-100">
                 <figure><img className='flex justify-center items-center' src={min1} alt="Album" /></figure>
                 <div className="card-body">
                     <h2 className="card-title text-center font-bold">Free Shipping</h2>
                     <p className='font-semibold'>For orders over $50</p>
                 </div>
             </div>
-            <div className="card lg:card-side bg-base-100 shadow-xl px-10 py-1 bg-cyan-100">
+            <div className="card lg:card-side  shadow-xl px-10 py-1 bg-cyan-100">
                 <figure><img src={min2} alt="Album" /></figure>
                 <div className="card-body">
                     <h2 className="card-title text-center font-bold">Official Discounts</h2>
                     <p className='font-semibold'>Save big on next product</p>
                 </div>
             </div>
-            <div className="card lg:card-side bg-base-100 shadow-xl px-14 bg-cyan-100">
+            <div className="card lg:card-side shadow-xl px-14 bg-cyan-100">
                 <figure><img src={min3} alt="Album" /></figure>
                 <div className="card-body">
                     <h2 className="card-title text-center font-bold">24/7 Helpline</h2>

@@ -7,6 +7,9 @@ const ManageUsers = () => {
             .then(res => res.json())
             .then(data => setUsers(data))
     }, [])
+
+
+
     return (
         <div>
             <h1 className='text-center text-3xl font-bold mt-5'>Users: <span className='text-cyan-700'>{users.length}</span></h1>
@@ -15,19 +18,25 @@ const ManageUsers = () => {
                     <thead className='bg-cyan-400'>
                         <tr>
                             <th className='bg-cyan-400'></th>
-                            <th className='text-sm font-extrabold text-center bg-cyan-400'>Name</th>
-                            <th className='text-sm font-extrabold text-center bg-cyan-400'>User Id</th>
+                            <th className='text-sm font-extrabold text-Start bg-cyan-400'>Name</th>
+                            <th className='text-sm font-extrabold text-start bg-cyan-400'>User Id</th>
+                            <th className='text-sm font-extrabold text-center bg-cyan-400'></th>
                             <th className='text-sm font-extrabold text-center bg-cyan-400'></th>
                         </tr>
                     </thead>
                     <tbody>
                         {
                             users.map((user, index) =>
-                                <tr>
+                                <tr key={user._id}>
                                     <th className='font-semibold text-center bg-cyan-100 '>{index + 1}</th>
-                                    <td className='font-semibold text-center bg-cyan-100 '>{user.email}</td>
-                                    <td className='font-semibold text-center bg-cyan-100 '>{user._id}</td>
-                                    <td className='font-semibold text-center bg-cyan-100 '><button className='bg-cyan-700 px-5 py-2 rounded text-white font-bold'>Delete</button></td>
+                                    <td className='font-semibold text-start bg-cyan-100 '>{user.email}</td>
+                                    <td className='font-semibold text-start bg-cyan-100 '>{user._id}</td>
+                                    <td className='font-semibold text-center bg-cyan-100 '>
+                                        <button
+                                            className='bg-cyan-700 px-5 py-2 rounded text-white font-bold'
+                                        >Make Admin
+                                        </button>
+                                    </td>
                                 </tr>)
                         }
                     </tbody>
