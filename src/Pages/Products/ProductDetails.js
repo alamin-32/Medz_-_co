@@ -33,7 +33,8 @@ const ProductDetails = () => {
             email: user.email,
             address: address,
             number: phone,
-            quantity: quantity
+            quantity: quantity,
+
         }
         console.log(order);
 
@@ -71,10 +72,9 @@ const ProductDetails = () => {
 
     }
 
-
-
-
     return (
+
+
         <div className=" mx-auto mt-10 grid grid-cols-1 lg:grid-cols-2 md:grid-cols-1 my-20">
 
             <div className='flex justify-center items-center'>
@@ -166,6 +166,7 @@ const ProductDetails = () => {
                 </div>
             </div>
         </div>
+
 
 
 
