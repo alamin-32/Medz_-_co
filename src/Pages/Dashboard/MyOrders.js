@@ -18,9 +18,9 @@ const MyOrders = () => {
                     <thead className='bg-cyan-400'>
                         <tr>
                             {/* <th className='bg-cyan-400'></th> */}
-                            <th className='text-sm font-bold text-center bg-cyan-400'>Name</th>
-                            <th className='text-sm font-bold text-center bg-cyan-400'>Product</th>
-                            <th className='text-sm font-bold text-center bg-cyan-400'>Quantity</th>
+                            <th className='text-sm font-extrabold text-center bg-cyan-400'>Name</th>
+                            <th className='text-sm font-extrabold text-center bg-cyan-400'>Product</th>
+                            <th className='text-sm font-extrabold text-center bg-cyan-400'>Quantity</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -29,7 +29,7 @@ const MyOrders = () => {
                                 {/* <th className='font-semibold text-center bg-cyan-100 '>1</th> */}
                                 <td className='font-semibold text-center bg-cyan-100 '>{order.email}</td>
                                 <td className='font-semibold text-center bg-cyan-100 '>{order._id}</td>
-                                <td className='font-semibold text-center bg-cyan-100 '>{order.quantity}</td>
+                                <td className='font-bold text-center bg-cyan-100 '>{order.quantity}</td>
                             </tr>)
                         }
                     </tbody>
