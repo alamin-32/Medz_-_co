@@ -17,7 +17,7 @@ const ProductDetails = () => {
         fetch(url)
             .then(res => res.json())
             .then(data => setProducts(data))
-    }, [products])
+    }, [id, products])
 
 
 
@@ -25,31 +25,32 @@ const ProductDetails = () => {
     const handlePurchase = (e) => {
         e.preventDefault();
         const address = e.target.address.value;
-        const number = e.target.number.value;
+        const phone = e.target.phone.value;
         const quantity = e.target.quantity.value;
 
-        const data = {
+        const order = {
             name: user.displayName,
             email: user.email,
             address: address,
-            number: number,
+            number: phone,
             quantity: quantity
         }
-        console.log(data);
+        console.log(order);
 
-        // const url = `https://medz-app.herokuapp.com/products`;
-        // fetch(url, {
-        //     method: "POST",
-        //     headers: {
-        //         "content-type": "application/json"
-        //     },
-        //     body: JSON.stringify(data)
-        // })
-        //     .then(res => res.json())
-        //     .then(result => {
-        //         console.log(result)
-        //         alert("Ordered Successful")
-        //     })
+        const url = 'https://medz-app.herokuapp.com/orders';
+        fetch(url, {
+            method: "POST",
+            headers: {
+                "content-type": "application/json"
+            },
+            body: JSON.stringify(order)
+        })
+            .then(res => res.json())
+            .then(result => {
+                console.log(result)
+                alert("Ordered Successful")
+                e.target.reset()
+            })
 
 
 
@@ -126,7 +127,7 @@ const ProductDetails = () => {
                                     type="text"
                                     placeholder="Phone Number"
                                     class="input input-bordered w-full max-w-xs"
-                                    name="number"
+                                    name="phone"
                                     required
                                 />
                             </div>
