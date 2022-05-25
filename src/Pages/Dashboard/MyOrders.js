@@ -17,7 +17,7 @@ const MyOrders = () => {
                 <table class="table w-full my-10 ">
                     <thead className='bg-cyan-400'>
                         <tr>
-                            {/* <th className='bg-cyan-400'></th> */}
+                            <th className='bg-cyan-400'></th>
                             <th className='text-sm font-extrabold text-center bg-cyan-400'>Name</th>
                             <th className='text-sm font-extrabold text-center bg-cyan-400'>Product</th>
                             <th className='text-sm font-extrabold text-center bg-cyan-400'>Quantity</th>
@@ -25,8 +25,8 @@ const MyOrders = () => {
                     </thead>
                     <tbody>
                         {
-                            orders.map(order => <tr>
-                                {/* <th className='font-semibold text-center bg-cyan-100 '>1</th> */}
+                            orders.map((order, index) => <tr>
+                                <th className='font-semibold text-center bg-cyan-100 '>{index + 1}</th>
                                 <td className='font-semibold text-center bg-cyan-100 '>{order.email}</td>
                                 <td className='font-semibold text-center bg-cyan-100 '>{order._id}</td>
                                 <td className='font-bold text-center bg-cyan-100 '>{order.quantity}</td>
