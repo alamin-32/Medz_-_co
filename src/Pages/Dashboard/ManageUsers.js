@@ -9,8 +9,6 @@ const ManageUsers = () => {
             .then(data => setUsers(data))
     }, [])
 
-
-
     return (
         <div>
             <h1 className='text-center text-3xl font-bold mt-5'>Users: <span className='text-cyan-700'>{users.length}</span></h1>

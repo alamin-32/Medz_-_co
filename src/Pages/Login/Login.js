@@ -3,6 +3,7 @@ import { useSignInWithEmailAndPassword, useSignInWithGoogle } from 'react-fireba
 import { useForm } from "react-hook-form";
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init'
+import useToken from '../Hooks/useToken';
 import Loading from '../Shared/Loading';
 
 const Login = () => {
@@ -14,7 +15,7 @@ const Login = () => {
         loading,
         error,
     ] = useSignInWithEmailAndPassword(auth);
-
+    const [token] = useToken(user || gUser)
     const navigate = useNavigate()
     const location = useLocation()
     let from = location.state?.from?.pathname || "/";
@@ -28,7 +29,7 @@ const Login = () => {
         signInError = <p className='text-red-600'><small>{error?.message || gError.message}</small></p>
     }
 
-    if (user || gUser) {
+    if (token) {
         navigate(from, { replace: true });
     }
     const onSubmit = data => {
@@ -50,6 +51,7 @@ const Login = () => {
                                 <span className="label-text font-bold">Email</span>
                             </label>
                             <input
+                                autoComplete='off'
                                 type="email"
                                 placeholder="Your Email"
                                 className="input input-bordered w-full max-w-xs"
@@ -77,6 +79,7 @@ const Login = () => {
                                 <span className="label-text font-bold">Password</span>
                             </label>
                             <input
+                                autoComplete='off'
                                 type="password"
                                 placeholder="password"
                                 className="input input-bordered w-full max-w-xs"
@@ -99,7 +102,7 @@ const Login = () => {
 
                             </label>
                         </div>
-                        <input className='btn w-full btn-outline max-w-xs text-white font-bold bg-cyan-400' value='Log In' type="submit" />
+                        <input className='btn w-full btn-outline max-w-xs text-white font-bold bg-cyan-400' value='Log In' autoComplete='off' type="submit" />
                     </form>
                     <p className='text-gray-600'>New to Medz? <Link className='text-cyan-600 font-semibold' to="/signup"> Create Account</Link></p>
                     <p className='text-gray-600'>Forgot Password? <Link className='text-cyan-600 font-semibold' to="/resetPass">Reset Password</Link></p>

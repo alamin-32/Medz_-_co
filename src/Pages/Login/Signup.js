@@ -54,6 +54,7 @@ const Signup = () => {
                                 <span className="label-text font-bold">Name</span>
                             </label>
                             <input
+                                autoComplete='off'
                                 type="text"
                                 placeholder="Your Name"
                                 className="input input-bordered w-full max-w-xs"
@@ -76,6 +77,7 @@ const Signup = () => {
                                 <span className="label-text font-bold">Email</span>
                             </label>
                             <input
+                                autoComplete='off'
                                 type="email"
                                 placeholder="Your Email"
                                 className="input input-bordered w-full max-w-xs"

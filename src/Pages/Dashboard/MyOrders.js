@@ -6,9 +6,16 @@ const MyOrders = () => {
     const [orders, setOrders] = useState([])
     const [user] = useAuthState(auth);
     useEffect(() => {
-        fetch(`https://medz-app.herokuapp.com/orders?email=${user.email}`)
-            .then(res => res.json())
-            .then(data => setOrders(data))
+        if (user) {
+            fetch(`https://medz-app.herokuapp.com/orders?email=${user.email}`, {
+                method: 'GET',
+                headers: {
+                    'authorization': `Bearer ${localStorage.getItem('accessToken')}`
+                }
+            })
+                .then(res => res.json())
+                .then(data => setOrders(data))
+        }
     }, [user])
     return (
         <div>

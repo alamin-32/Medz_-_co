@@ -28,16 +28,19 @@ const ManageItems = () => {
             <form className='flex flex-col px-5  lg:w-3/6 mx-auto mt-6'
                 onSubmit={handleSubmit(onSubmit)}>
                 <input className=' font-bold text-white mb-1 p-3 rounded  bg-slate-500' name='img'
+                    autoComplete='off'
                     placeholder='Photo Url'
                     type="text" {...register("img")} />
 
                 <input className=' font-bold mb-1 p-3 rounded bg-slate-500'
                     name='name'
+                    autoComplete='off'
                     placeholder='Product Name'
                     {...register("name")} />
 
                 <textarea className='font-bold mb-1 p-3 rounded bg-slate-500'
                     name='description'
+                    autoComplete='off'
                     placeholder='Description'
                     {...register("description")} />
 
