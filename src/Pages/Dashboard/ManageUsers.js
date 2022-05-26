@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import AllUsers from './AllUsers';
 
 const ManageUsers = () => {
     const [users, setUsers] = useState([])
@@ -26,18 +27,10 @@ const ManageUsers = () => {
                     </thead>
                     <tbody>
                         {
-                            users.map((user, index) =>
-                                <tr key={user._id}>
-                                    <th className='font-semibold text-center bg-cyan-100 '>{index + 1}</th>
-                                    <td className='font-semibold text-start bg-cyan-100 '>{user.email}</td>
-                                    <td className='font-semibold text-start bg-cyan-100 '>{user._id}</td>
-                                    <td className='font-semibold text-center bg-cyan-100 '>
-                                        <button
-                                            className='bg-cyan-700 px-5 py-2 rounded text-white font-bold'
-                                        >Make Admin
-                                        </button>
-                                    </td>
-                                </tr>)
+                            users.map((user) => <AllUsers
+                                key={user._id}
+                                user={user}
+                            ></AllUsers>)
                         }
                     </tbody>
                 </table>
