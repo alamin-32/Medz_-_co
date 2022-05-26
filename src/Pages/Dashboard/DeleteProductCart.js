@@ -27,6 +27,7 @@ const DeleteProductCart = ({ product, index }) => {
             <th className='font-semibold text-center bg-cyan-100 '>{index + 1}</th>
             <td className='font-semibold text-start bg-cyan-100 '>{name}</td>
             <td className='font-semibold text-start bg-cyan-100 '>{_id}</td>
+            <td className='font-semibold text-start bg-cyan-100 '></td>
             <td className='font-semibold text-center bg-cyan-100 '>
                 <button
                     onClick={() => handleProductsDelete(product._id)}

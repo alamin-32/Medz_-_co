@@ -1,4 +1,4 @@
-import logo from './logo.svg';
+
 import './App.css';
 import { Route, Routes } from 'react-router-dom';
 import Home from './Pages/Home/Home';
@@ -17,6 +17,7 @@ import MyOrders from './Pages/Dashboard/MyOrders';
 import MyReview from './Pages/Dashboard/MyReview';
 import ManageItems from './Pages/Dashboard/ManageItems';
 import ManageUsers from './Pages/Dashboard/ManageUsers';
+import Reviews from './Pages/Home/Reviews';
 
 function App() {
   return (
@@ -50,6 +51,7 @@ function App() {
             </RequireAuth>
           }></Route>
 
+          <Route path='/reviews' element={<Reviews></Reviews>}></Route>
           <Route path='/blogs' element={<Blogs></Blogs>}></Route>
           <Route path='/login' element={<Login></Login>}></Route>
           <Route path='/signup' element={<Signup></Signup>}></Route>
