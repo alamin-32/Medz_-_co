@@ -1,8 +1,10 @@
 import React from 'react';
 import { useForm } from 'react-hook-form';
+import DeleteProduct from './DeleteProduct';
 
 const ManageItems = () => {
     const { register, handleSubmit } = useForm();
+
 
     const onSubmit = data => {
         fetch('https://medz-app.herokuapp.com/products', {
@@ -33,6 +35,7 @@ const ManageItems = () => {
                 <input className='font-bold mb-1 p-3 rounded bg-slate-500' name='available' placeholder='Quantity' type="number" {...register("available")} />
                 <input className='mb-2 w-50 mx-auto bg-cyan-400 mt-2 px-4 py-2 rounded text-large font-semibold text-white add-product' type="submit" value="Add products" />
             </form>
+            <DeleteProduct></DeleteProduct>
         </div>
     );
 };

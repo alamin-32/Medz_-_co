@@ -1,12 +1,12 @@
 import React from 'react';
 
-const AllUsers = ({ user }) => {
+const AllUsers = ({ user, index }) => {
     const { email, _id } = user
 
     const makeAdmin = () => {
         fetch(`https://medz-app.herokuapp.com/users/admin/${email}`, {
             method: 'PUT',
-            headers: { 
+            headers: {
                 'content-type': 'application/json'
             }
                 .then(res => res.json())
@@ -18,7 +18,7 @@ const AllUsers = ({ user }) => {
     }
     return (
         <tr>
-            <th className='font-semibold text-center bg-cyan-100 '>1</th>
+            <th className='font-semibold text-center bg-cyan-100 '>{index + 1}</th>
             <td className='font-semibold text-start bg-cyan-100 '>{email}</td>
             <td className='font-semibold text-start bg-cyan-100 '>{_id}</td>
             <td className='font-semibold text-center bg-cyan-100 '>
