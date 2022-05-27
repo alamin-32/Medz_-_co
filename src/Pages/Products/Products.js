@@ -17,7 +17,7 @@ const Products = ({ home }) => {
                 <div className='grid lg:grid-cols-3 sm:grid-cols-1  gap-5  px-5'>
                     {
                         home ?
-                            products.slice(6, 10).reverse().map(product => (
+                            products.slice(-3).reverse().map(product => (
                                 <Product
                                     key={product._id}
                                     product={product}

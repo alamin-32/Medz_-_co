@@ -18,6 +18,8 @@ import MyReview from './Pages/Dashboard/MyReview';
 import ManageItems from './Pages/Dashboard/ManageItems';
 import ManageUsers from './Pages/Dashboard/ManageUsers';
 import Reviews from './Pages/Home/Reviews';
+import MyPortfolio from './Pages/Home/MyPortfolio';
+import MyProfile from './Pages/Dashboard/MyProfile';
 
 function App() {
   return (
@@ -43,6 +45,7 @@ function App() {
             <Route path='review' element={<MyReview></MyReview>}></Route>
             <Route path='manageItem' element={<ManageItems></ManageItems>}></Route>
             <Route path='manageUsers' element={<ManageUsers></ManageUsers>}></Route>
+            {/* <Route path='myProfile' element={<MyProfile></MyProfile>}></Route> */}
           </Route>
 
           <Route path='/productDetails/:id' element={
@@ -52,6 +55,7 @@ function App() {
           }></Route>
 
           <Route path='/reviews' element={<Reviews></Reviews>}></Route>
+          <Route path='/myPortfolio' element={<MyPortfolio></MyPortfolio>}></Route>
           <Route path='/blogs' element={<Blogs></Blogs>}></Route>
           <Route path='/login' element={<Login></Login>}></Route>
           <Route path='/signup' element={<Signup></Signup>}></Route>

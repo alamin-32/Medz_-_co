@@ -28,7 +28,7 @@ const ManageUsers = () => {
                             users.map((user, index) => <AllUsers
                                 index={index}
                                 key={user._id}
-                                user={user}
+                                adminUser={user}
                             ></AllUsers>)
                         }
                     </tbody>

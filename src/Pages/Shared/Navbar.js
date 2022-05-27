@@ -26,12 +26,11 @@ const Navbar = () => {
             <li><Link to='/products'>Products</Link></li>
             <li><Link to='/blogs'>Blogs</Link></li>
             <li><Link to='/reviews'>Reviews</Link></li>
-
             {
                 user &&
                 <li><Link to='/dashboard'>DashBoard</Link></li>
             }
-
+            <li><Link to='/myPortfolio'>Portfolio</Link></li>
             {
                 user ?
                     <button

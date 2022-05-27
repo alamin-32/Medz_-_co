@@ -18,6 +18,7 @@ const Dashboard = () => {
                     <li className='text-md font-bold'><Link to='review'>My Review</Link></li>
                     <li className='text-md font-bold'> <Link to='manageItem'>Manage Products</Link></li>
                     <li className='text-md font-bold'> <Link to='manageUsers'>Manage Users</Link></li>
+                    {/* <li className='text-md font-bold'> <Link to='myProfile'>My Profile</Link></li> */}
                 </ul>
             </div>
         </div>
